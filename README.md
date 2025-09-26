@@ -1,4 +1,4 @@
-##Tests unitaires
+## Tests unitaires
 - Cours et exercice 1 [user.test.js](src/modules/authentication/user/user.test.js).
 - Exercice 2 [account.test.js](src/modules/banking/account/account.test.js).
 - Exercice 5 `npm run coverage`.
