@@ -63,4 +63,18 @@ test.describe("Ecommerce's product page", () => {
         // On vérifie que le bouton "Add to cart" est bien visible
         await expect(page.getByRole("button", { name: " Add to cart" })).toBeVisible();
     });
+
+    test("should update the basket", async ({
+                                                                              page,
+                                                                          }) => {
+        await page.goto("https://automationexercise.com/product_details/30");
+
+        await page.getByRole("button", { name: " Add to cart" }).click();
+
+        await page.getByRole("link", { name: "View Cart" }).click();
+
+        await expect(page.getByRole("row", { name: /Premium Polo T-Shirts/ })).toBeVisible();
+
+        await expect(page.locator('tr[id="product-30"]')).toBeVisible();
+    });
 });
