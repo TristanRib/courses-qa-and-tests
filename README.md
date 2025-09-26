@@ -1,0 +1,3 @@
+- Cours et exercices 1&2 [ecommerce.specs.ts](tests/ecommerce.spec.ts).
+- Exercice 3 [auth.specs.ts](tests/AUTH-E2E/auth.spec.ts). 
+- Exercice 4 Bonus [api-platform.specs.ts](tests/api/api-platform.spec.ts).
