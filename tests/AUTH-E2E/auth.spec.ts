@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Sign Up form validation', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('http://localhost:3000/index.html'); // adapte si ton serveur tourne ailleurs
+        await page.goto('http://localhost:3000/index.html');
     });
 
     test('should show success message when form is valid', async ({ page }) => {
@@ -25,7 +25,6 @@ test.describe('Sign Up form validation', () => {
     });
 
     test('should show error when fields are missing', async ({ page }) => {
-        // Envoie le formulaire vide
         await page.click('button[type="submit"]');
 
         await expect(page.locator('#username-error')).toBeVisible();
